@@ -13,3 +13,6 @@ runs:
   steps:
     - run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
+      env:
+        URL: ${{ inputs.url }}
+        IMAGE: ${{ inputs.image }}
