@@ -1,0 +1,8 @@
+
+name: 'deploy-cops-action'
+description: 'Action to deploy application on COPS'
+runs:
+  using: 'composite'
+  steps:
+    - run: ${{ github.action_path }}/entrypoint.sh
+      shell: bash
