@@ -1,6 +1,13 @@
 
 name: 'deploy-cops-action'
 description: 'Action to deploy application on COPS'
+inputs:
+  url:
+    description: 'Application url in COPS'
+    required: true
+  image:
+    description: 'Full image path with version'
+    required: true
 runs:
   using: 'composite'
   steps:
