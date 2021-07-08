@@ -1,6 +1,4 @@
-FROM registry.olxbr.io:5000/python:3.7-slim
-
-RUN apt-get upgrade && apt-get update && apt-get -qq -y install curl
+FROM public.ecr.aws/cloudone_application_security/lambda-python:3.7
 
 COPY entrypoint.sh /entrypoint.sh
 COPY wait.py /wait.py
