@@ -10,7 +10,6 @@ inputs:
     required: true
   timeout_in_seconds:
     description: 'Max timeout to wait deploy to finish'
-    required: true
     default: 600
 runs:
   using: 'docker'
