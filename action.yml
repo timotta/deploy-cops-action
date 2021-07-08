@@ -11,11 +11,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Setup python 3.7
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7
-
     - run: python --version
 
     - run: ${{ github.action_path }}/entrypoint.sh
