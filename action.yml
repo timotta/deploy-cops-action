@@ -8,9 +8,14 @@ inputs:
   image:
     description: 'Full image path with version'
     required: true
+  timeout_in_seconds:
+    description: 'Max timeout to wait deploy to finish'
+    required: true
+    default: 600
 runs:
   using: 'docker'
   image: Dockerfile
   args:
     - ${{ inputs.image }}
     - ${{ inputs.url }}
+    - ${{ inputs.timeout_in_seconds }}
